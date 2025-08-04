@@ -1,0 +1,867 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background: #1a6194;
+    color: #000;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3, h4, h5, h6, p{
+    margin: 20px 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 16px;
+}
+p {
+    text-align: justify;
+}
+
+hr{
+    width: 75%;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+section, main, aside{
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+}
+
+/* menu */
+
+#menu {
+    display: none;
+}
+
+label[for="menu"] {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+
+    background: #ffffff;
+    color: #1a6194;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    text-align: center;
+    font-size: 50px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+#menu:checked ~ header {
+    left: 0%;
+}
+#menu:checked ~ label[for="menu"] {
+    filter: brightness(80%);
+}
+
+/* header */
+
+header{
+    text-transform: uppercase;
+    z-index: 2;
+    display: flex;
+    background: #ffffff;
+    top: 0;
+    font-size: 12px;
+}
+
+/* navegacao */
+
+#navegacao {
+    text-align: center;
+}
+#navegacao > ul {
+    display: flex;
+}
+#navegacao ul li a:hover {
+    background: #1a6194;
+    color: #ffffff;
+}
+#navegacao ul li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+}
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    border-top: 3px solid #fffb00;
+}
+
+/* bordao */
+
+#bordao {
+    background: url(../imagens/intro.gif) center no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+#bordao h1 {
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+/* novidades */
+
+#novidades {
+    background: #ffffff;
+}
+
+/* social */
+
+#social {
+    box-shadow: none;
+    padding: 0;
+}
+
+/* projeto */
+
+.projeto, .redesSociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+.projeto {
+    background: url(../imagens/projeto.png) center no-repeat;
+    background-size: cover;
+    align-items: center;
+    color: #ffffff;
+}
+.projeto .btn-2 {
+    margin-top: 20px;
+}
+
+/* redes sociais */
+
+.redesSociais {
+    background: #ffffff;
+}
+.redesSociais div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.redesSociais a:hover {
+    filter: grayscale(100%);
+}
+
+/* parceiros */
+
+#parceiros {
+    background: #ffffff;
+}
+.parceiros-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px 0;
+}
+.parceiros-flex a:hover {
+    filter: grayscale(100%);
+}
+
+/* local */
+    
+#local {
+    background: #ffffff;
+}
+#local hr {
+    margin-bottom: 20px;
+}
+#local-mapa{
+    width: 100%;
+    border: 0px;
+    border-radius: 5px;
+}
+
+/* voltar ao inicio */
+
+.voltar {
+    background: #ffffff;
+    text-align: center;
+}
+
+/* rodape */
+
+footer{
+    background: #101010;
+    color: #ffffff;
+    padding: 50px 0;
+}
+.rodape {
+    display: flex;
+    align-items: flex-start;
+}
+.rodape img {
+    height: 50px;
+    margin-right: 10px;
+    
+}
+.informacoes {
+    font-size: 11px;
+}
+.informacoes hr {
+    margin: 50px 0;
+}
+
+
+
+.btn-1, .btn-2 {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn-1 {
+    background: #1a6194;
+    color: #ffffff;
+}
+.btn-2 {
+    background: #ffffff;
+    color: #000000;
+}
+.btn-1:hover, .btn-2:hover {
+    filter: brightness(80%);
+    padding: 10px 25px;
+}
+
+/* animacao */
+
+@keyframes corpo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: corpo 1s .5s backwards;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .container {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    /* header */
+
+    header {
+        overflow-y: scroll;
+        position: fixed;
+        left: -100%;
+
+        width: 75%;
+        height: 100vh;
+        padding: 20px 0;
+        border-radius: 5px;
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        transition: all .2s ease-in-out;
+    }
+    header img{
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    /* navegacao */
+
+    #navegacao > ul {
+        width: 100%;
+        margin-top: 20px;
+        flex-direction: column;
+        background: #ffffff;
+        border-bottom: 1px solid #1a6194;
+    }
+    #navegacao ul li a{
+        display: block;
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        border-top: 1px solid #1a6194;
+    }
+    #navegacao ul li:hover > ul{
+        position: relative;
+    }
+    .dropdown a {
+        background: #dcdcdc;
+    }
+
+    /* bordao */
+
+    #bordao {
+        padding: 130px 0;
+    }
+    #bordao img {
+        height: 70px;
+    }
+
+    /* novidades */
+    
+    .nov-caixa {
+        padding: 20px 20px 10px 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+        background: #f5f5f5;
+    }
+    a:hover .nov-caixa {
+        filter: brightness(90%);
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* social */
+
+    /* projeto */
+
+    .projeto {
+        padding: 70px 20px;
+    }
+
+    /* redes sociais */
+
+    .redesSociais {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .redesSociais div {
+        justify-content: center;
+    }
+
+    .redesSociais img {
+        height: 100px;
+        margin: 0 20px;
+    }
+
+    /* parceiros */
+
+    .parceiros-flex img {
+        height: 45px;
+    }
+
+    /* local */
+
+    #local-mapa{
+        height: 350px;
+    }
+
+    /* rodape */
+
+    .rodape {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        width: 570px;
+        margin: 0 auto;
+    }
+
+    /* header */
+
+    header {
+        overflow-y: scroll;
+        position: fixed;
+        left: -100%;
+
+        width: 75%;
+        height: 100vh;
+        padding: 20px 0;
+        border-radius: 5px;
+
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        transition: all .2s ease-in-out;
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+    header img{
+        height: 80px;
+        border-radius: 5px;
+    }
+
+    /* navegacao */
+
+    #navegacao > ul {
+        width: 100%;
+        margin-top: 20px;
+        flex-direction: column;
+        background: #ffffff;
+        border-bottom: 1px solid #1a6194;
+    }
+    #navegacao ul li a{
+        display: block;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        border-top: 1px solid #1a6194;
+    }
+    #navegacao ul li:hover > ul{
+        position: relative;
+    }
+    .dropdown a {
+        background: #dcdcdc;
+    }
+
+    /* bordao */
+
+    #bordao {
+        padding: 150px 0;
+    }
+    #bordao img {
+        height: 80px;
+    }
+
+    /* novidades */
+    
+    .nov-caixa {
+        padding: 20px 20px 10px 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+        background: #f5f5f5;
+    }
+    a:hover .nov-caixa {
+        filter: brightness(90%);
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* social */
+
+    /* projeto */
+
+    .projeto {
+        padding: 70px 20px;
+    }
+
+    /* redes sociais */
+
+    .redesSociais {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .redesSociais div {
+        justify-content: center;
+    }
+
+    .redesSociais img {
+        height: 100px;
+        margin: 0 20px;
+    }
+
+    /* parceiros */
+
+    .parceiros-flex img {
+        height: 55px;
+    }
+
+    /* local */
+
+    #local-mapa{
+        height: 350px;
+    }
+
+    /* rodape */
+
+    .rodape {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    /* menu */
+
+    #menu, label[for="menu"] {
+        display: none;
+    }
+
+    /* header */
+
+    header {
+        position: -webkit-sticky;
+        position: sticky;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+    header img{
+        height: 40px;
+        border-radius: 5px;
+    }
+    header:hover {
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* navegacao */
+
+    #navegacao > ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+    }
+    #navegacao ul li a{
+        display: block;
+        width: 120px;
+        height: 45px;
+        line-height: 45px;
+        background: #ffffff;
+    }
+    .dropdown {
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* bordao */
+
+    #bordao {
+        padding: 150px 0;
+    }
+    #bordao img {
+        height: 50px;
+    }
+
+    /* novidades */
+    
+    .nov-caixa {
+        padding: 20px 20px 10px 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+        background: #f5f5f5;
+    }
+    a:hover .nov-caixa {
+        filter: brightness(90%);
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* social */
+
+    #social {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 200px;
+        gap: 20px;
+    }
+
+    .projeto, .redesSociais {
+        padding: 20px;
+    }
+
+    /* redes sociais */
+
+    .redesSociais img {
+        height: 60px;
+    }
+
+    /* parceiros */
+
+    .parceiros-flex img {
+        height: 70px;
+    }
+
+    /* local */
+
+    #local-mapa{
+        height: 400px;
+    }
+
+    /* rodape */
+
+    .rodape {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    /* menu */
+
+    #menu, label[for="menu"] {
+        display: none;
+    }
+
+    /* header */
+
+    header {
+        position: -webkit-sticky;
+        position: sticky;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+    header img{
+        height: 40px;
+        border-radius: 5px;
+    }
+    header:hover {
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* navegacao */
+
+    #navegacao > ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+    }
+    #navegacao ul li a{
+        display: block;
+        width: 120px;
+        height: 45px;
+        line-height: 45px;
+        background: #ffffff;
+    }
+    .dropdown {
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* bordao */
+
+    #bordao {
+        padding: 180px 0;
+    }
+    #bordao img {
+        height: 80px;
+    }
+
+    /* novidades */
+
+    .novidade-grid {
+        display: grid;
+        grid-template: 1fr/1fr 1fr 1fr;
+        gap: 20px;
+        align-items: stretch;
+    }
+    .nov-caixa {
+        height: 400px;
+        padding: 10px;
+        margin: 20px 0;
+        border-radius: 5px;
+        background: #f5f5f5;
+    }
+    a:hover .nov-caixa {
+        filter: brightness(90%);
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* social */
+
+    #social {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 200px;
+        gap: 20px;
+    }
+
+    .projeto, .redesSociais {
+        padding: 20px;
+    }
+
+    /* redes sociais */
+
+    .redesSociais img {
+        height: 70px;
+    }
+
+    /* parceiros */
+
+    .parceiros-flex img {
+        height: 90px;
+    }
+
+    /* local */
+
+    #local-mapa{
+        height: 450px;
+    }
+
+    /* rodape */
+
+    .rodape {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* menu */
+
+    #menu, label[for="menu"] {
+        display: none;
+    }
+
+    /* header */
+
+    header {
+        position: -webkit-sticky;
+        position: sticky;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+    header img{
+        height: 40px;
+        border-radius: 5px;
+    }
+    header:hover {
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, .3);
+    }
+
+
+    /* navegacao */
+
+    #navegacao > ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+    }
+    #navegacao ul li a{
+        display: block;
+        width: 120px;
+        height: 45px;
+        line-height: 45px;
+        background: #ffffff;
+    }
+    .dropdown {
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* bordao */
+
+    #bordao {
+        padding: 200px 0;
+    }
+    #bordao img {
+        height: 100px;
+    }
+
+    /* novidades */
+
+    .novidade-grid {
+        display: grid;
+        grid-template: 1fr/1fr 1fr 1fr;
+        gap: 20px;
+        align-items: stretch;
+    }
+    .nov-caixa {
+        height: 400px;
+        padding: 10px;
+        margin: 20px 0;
+        border-radius: 5px;
+        background: #f5f5f5;
+    }
+    a:hover .nov-caixa {
+        filter: brightness(90%);
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, .3);
+    }
+
+    /* social */
+
+    #social {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 200px;
+        gap: 20px;
+    }
+
+    .projeto, .redesSociais {
+        padding: 20px;
+    }
+
+    /* redes sociais */
+
+    .redesSociais img {
+        height: 70px;
+    }
+
+    /* parceiros */
+
+    .parceiros-flex img {
+        height: 90px;
+    }
+
+    /* local */
+
+    #local-mapa{
+        height: 450px;
+    }
+
+    /* rodape */
+
+    .rodape {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}

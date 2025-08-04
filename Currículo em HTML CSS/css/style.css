@@ -1,0 +1,167 @@
+*{
+    font-family: "Montserrat", "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    transition: all 0.1s linear;
+    scroll-behavior: smooth;
+}
+body{
+    background: #f7f7f7;
+}
+h1, h2, h3{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+p{
+    text-align: justify;
+}
+hr{
+    width: 40%;
+    margin-left: 0;
+    border: solid 1px #07f9a2;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.container{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.box{
+    padding: 10px;
+    max-width: 400px;
+    min-width: 150px;
+    min-height: 100px;
+    border: 1px solid lightgray;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.box:hover{
+    border: 1px solid #4d4d4d;
+}
+
+.box-externa{
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.box-externa:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.display-flex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.display-flex-footer{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+#perfil{
+    padding: 150px 0 120px 0;
+    color: #fff;
+    background-image: url(../imagens/wallpaper.png);
+    background-position: bottom;
+    background-size: cover;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+#perfil img{
+    width: 200px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255, 0.9); /*0077FF*/
+    color: #000;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    background-color: rgba(255,255,255, 1);
+}
+#navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar a{
+    display: block;
+    padding: 20px 10px;
+}
+#navbar a:hover{
+    background-color: #4d4d4d;
+    color: #fff;
+}
+
+#informacoes img, #obj-e-hab img, #form-academica img, #form-complementar img, #experiencia img{
+    width: 20px;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #4D4D4D;
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+footer img{
+    height: 30px;
+}
+footer a img:hover{
+    filter: brightness(0.5);
+}
+footer ul li a{
+    display: block;
+    padding: 5px;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+}
+footer span{
+    width: 100%;
+    padding: 50px 0px 0px 0px;
+    text-align: center;
+}
+
+
+@keyframes animacao-intro{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+body{
+    animation: animacao-intro .5s backwards;
+}
